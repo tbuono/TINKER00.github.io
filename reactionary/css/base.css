@@ -1,0 +1,474 @@
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    padding-bottom: 40px;
+    font-family: Vollkorn, serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*
+img {
+    min-height: 1px;
+    min-width: 1px;
+}
+*/
+/*/////////////////////////////////*/
+
+/*CUSTOM FONTS*/
+
+/*/////////////////////////////////*/
+
+@font-face {
+    font-family: BebasNeue Regular;
+    src: url("../assets/fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoCondensed Regular;
+    src: url("../assets/fonts/RobotoCondensed-Regular.ttf");
+}
+
+
+/***
+navbar
+***/
+.navbar {
+    text-transform: uppercase;
+    z-index: 1051;
+    
+}
+
+.navbar .title {
+    color: #ddd;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Safari */
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.navbar .title h1 {
+    font-family: BebasNeue Regular, sans-serif;
+    font-size: 18px;
+    /*margin-top: 10px;*/
+    text-align: center;
+    
+}
+
+.navbar .title h1 a {
+    color: #ddd;
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+    font-style: normal;
+}
+
+.navbar .utils span,
+.navbar .utils a {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.branding.reactionary {
+    background-image: url("../assets/images/reactionary-logo@2x.png");
+    background-size: 100px 21px;
+    background-repeat: no-repeat;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 100px;
+    height: 21px;
+
+    opacity:.5;
+    text-indent: 10000px;
+    z-index: 10;
+}
+
+.branding.reactionary:hover {
+    opacity:1;
+}
+
+.title-card {
+    min-height: 100%;
+}
+
+.story section {
+    clear: both;
+    min-height: 100px;
+}
+
+.story section:first-child {
+    margin-top: 50%;
+}
+
+.story section:last-of-type,
+.story section:last-child {
+    margin-bottom: 75% !important;
+}
+
+.story section.creditsNames {
+    margin-bottom: 5% !important;
+}
+
+/***
+objects array
+***/
+
+#objects {
+    background-image: url("../assets/images/background-woodtexture@2x.jpg");
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    min-height: 100%;
+    width: 100%;
+}
+
+#objects ol {
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#objects ol li {
+    color: #fff;
+    list-style: lower-alpha inside;
+    margin-top: 2em;
+}
+
+#objects img {
+    opacity: .65;
+    -webkit-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+#objects img:hover {
+    opacity: 1;
+    -webkit-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+
+/***
+stories are modals
+***/
+body.modal-open > #objects {
+    overflow: hidden;
+    height: 100%;
+}
+
+.modal-content, 
+.modal-dialog, 
+.modal-body { 
+    height: inherit; 
+    min-height: 100%; 
+}
+
+.modal { 
+    min-height: 100%; 
+}
+
+article .scroll-indicator {
+    background-image: url("../assets/images/common_elements/scroll-tip-arrow-down@2x.png");
+    background-size: 41px 17px;
+    background-repeat: no-repeat;
+    width: 39px;
+    height: 17px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    margin: 0 auto 10% auto;
+}
+
+article .scroll-indicator p {
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size:.7em;
+}
+
+article.story {
+    /*background-image: url("../assets/images/background-woodtexture@2x.jpg");*/
+    background-repeat: repeat repeat;
+    background-size: 100% auto;
+}
+
+/* background animations */
+.fade-background {
+    -webkit-transition: background-image 1s ease-in-out;
+    -o-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
+}
+
+.fade-out {
+    -webkit-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    opacity: 0 !important;
+    pointer-events: none; /* because this fades out but stays fixed */
+}
+
+.fade-in {
+    -webkit-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    opacity: 1 !important;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    background-size: cover;
+    background-position: 50% 50%;
+
+    pointer-events: none;
+    /*-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;*/
+
+    /*-webkit-transform: translate3d(0,0,0);*/
+
+}
+
+.background.fade-in {
+    opacity: 1;
+}
+
+.background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .70);
+    pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+
+  -webkit-transform: translate(0, 0); /* no slide */
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal.in .modal-dialog {
+    
+    width: 100%;
+    margin: 0;
+    
+    padding-bottom: 50px;
+}
+
+.modal header {
+    color: #fff;
+    height: 100%;
+    margin-top: 0;
+    /*margin-bottom: 50%;*/
+    text-align: center;
+    z-index: 5;
+    position: relative;
+}
+
+.modal header .headings {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+    margin-left:0;
+    /*padding: 1em;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 10% auto;
+    pointer-events: none;*/
+}
+
+.modal-content {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.modal-body {
+    padding: 0;
+    /*z-index: 1000;*/
+}
+
+.modal-body section {
+    background-color: rgba(255, 255, 255, .6);
+    border: none;
+    color: #1C1C1C;
+    font-size: 20px;
+    margin: 0 auto 1em auto;
+    padding: 3em;
+    padding-bottom: 1.4em;
+    width: 40%;
+}
+
+.modal-body section p {
+    margin-bottom: 1.6em;
+}
+
+.modal-footer {
+    border: none;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Previous/Next Buttons in Foot */
+
+.buttons-wrapper {
+    width: 500px;
+    margin: 0 auto;
+    z-index: 10000;
+}
+
+.buttons-wrapper .previous-button {
+    width: 90px;
+    float: left;
+}
+
+.buttons-wrapper .previous-button a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.buttons-wrapper .next-button {
+    width: 65px;
+    float: right;
+}
+
+.buttons-wrapper .next-button a {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.buttons-wrapper .previous-button .previous-icon {
+    background-image: url("../assets/images/common_elements/prev-arrow@2x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    width: 11px;
+    float: left;
+    position: relative;
+    top: 10px;
+    opacity:.8;
+}
+
+.buttons-wrapper .next-button .next-icon {
+    background-image: url("../assets/images/common_elements/next-arrow@2x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    width: 11px;
+    float: right;
+    position: relative;
+    top: 10px;
+    opacity:.8;
+}
+
+
+/* surface fixed things */
+.fixed-center {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+}
+/*
+.surface {
+    z-index: -1;
+}
+*/
+.surface img.fixed-center {
+    z-index: -1;
+}
+
+/* slideshows */
+.controls {
+    pointer-events: none;
+}
+
+.controls a {
+    pointer-events: all;
+}
+
+.slideshow .controls .right,
+.slideshow .controls .left {
+    background-image: none;
+}
+
+.slideshow img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* home button */
+
+.story-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 83px;
+    height: 39px;
+    background-color: rgba(0, 0, 0, .85);
+    padding: 8px 14px;
+    margin-left: 20px;
+}
+
+.story-navigation:hover {
+    opacity: .8;
+}
+
+.story-navigation .nav-object {
+    width: 7px;
+    height: 7px;
+    margin: 2px;
+    background-color: #808080;
+    display: block;
+    float: left;
+}
+
+#intro .story-navigation {
+    display: none;
+}
+
+#notebooks .nav-obj-notebooks {
+    background-color: #FFF;
+}
+

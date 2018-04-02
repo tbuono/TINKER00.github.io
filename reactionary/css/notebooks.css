@@ -1,0 +1,156 @@
+/***
+Notebooks 
+***/
+
+
+#binBooks {
+    width:491px;
+    height:389px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#bookShadow {
+    width:800px;
+    position:absolute;
+    z-index:-1;
+}
+
+#bookWriting{
+    width:800px;
+}
+
+#daveLabel {
+    width: 374px;
+    height: 151px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#notebookOtherPages {
+    width: 800px;
+    height: 532px;
+}
+
+#notebook-pile {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%);/* Safari */
+    transform: translate(-50%, -50%);
+    background-size: 800px 615px;
+    width: 800px;
+    height: 615px;
+}
+
+#notebook-carousel .carousel-inner .item img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%);/* Safari */
+    transform: translate(-50%, -50%);
+}
+
+#notebooks .background {
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    z-index: -1;
+}
+
+#notebooks .surface .carousel {
+    display: none;
+    position: relative;
+}
+
+#notebook-opening {
+    background-position: 0px 0px;
+    background-size: 3560px 801px;
+    width: 890px;
+    height: 801px;
+    overflow: hidden;
+    z-index: 3;
+    display: none;
+}
+
+#notebook-collaging {
+    /*background-image: url('../assets/images/object_notebooks/collaging-shadow@1x.png');*/
+    display: none;
+}
+
+#notebooks .pair {
+    height: 600px;
+    position: relative;
+}
+
+#notebooks .pair img {
+    margin-top:5%;
+    clear: both;
+    position: absolute;
+    z-index: -1;
+}
+
+#david-writing {
+    left: 0;
+    width:300px;
+    height:457px;
+}
+
+#ken-piano {
+    right: 0;
+    width:300px;
+    height:462px;
+}
+
+#notebooks .notebook-space {
+    margin-top: 2em;
+    min-height: 600px;
+}
+
+#notebooks .notebook-controls {
+    display: none;
+}
+
+#notebooks .notebook-controls {
+    width: 80%;
+    position: fixed;
+    top: 42%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+#notebooks .notebook-controls a {
+    color: #FFF;
+    text-decoration: none;
+    font-style: italic;
+    width: 70px;
+}
+
+#notebooks .notebook-controls img {
+    /*position: initial;*/
+    position: relative;
+    width:33px;
+    height:35px;
+    left: 15%;
+}
+
+#notebooks .notebook-controls img:hover {
+    /*position: initial;*/
+    opacity:.8;
+}
+
+#notebooks .notebook-control-left {
+    float: left;
+}
+
+#notebooks .notebook-control-right {
+    float: right;
+}
+
+#notebooks section:last-of-type {
+    margin-bottom: 75%;
+}

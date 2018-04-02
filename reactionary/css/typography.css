@@ -1,0 +1,1533 @@
+
+
+article {
+    /*overflow-y:scroll !important;
+    ms-overflow-style: auto !important;*/ /*Thought maybe to cater to Kenovo and Android, but no dice on Kenovo*/
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+}
+
+
+#forceLandscape {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index: 99999;
+    display:none;
+}
+
+#forceLandscape div {
+    position:relative;
+    width:290px;
+    height:150px;
+    top:50%;
+    -ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Safari */
+    transform: translateY(-50%);
+    margin:0 auto;
+}
+
+#forceLandscape p {
+    text-align:center;
+    font-family: 'Vollkorn', sans-serif;
+    font-style:italic;
+    font-size:.9em;
+    text-decoration: none;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#forceLandscape img {
+    position:relative;
+    width:171px;
+    height:100px;
+    left:50%;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Safari */
+    transform: translateX(-50%);
+}
+
+#map section > ul {
+    font-family: 'RobotoCondensed Regular', sans-serif;
+    font-size:.7em;
+    line-height:2em;
+    /*text-transform: uppercase;*/
+    list-style:none;
+    text-align:center;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-left:0px;
+}
+
+#map section > ul:last-child {
+    margin-bottom:30px;
+}
+
+
+.continue-icon {
+    background-image: url("../assets/images/common_elements/next-arrow@2x.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    width: 11px;
+    position: relative;
+    top: 2px;
+    left: 8px;
+    opacity: .8;
+}
+
+
+.previous-button h4 {
+    font-size: 21px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.next-button h4 {
+    font-size: 21px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.previous-button h4:hover, .next-button h4:hover {
+    opacity:.8;
+}
+
+#creditsBtn {
+    position: absolute;
+    bottom: 0%;
+    width: 200px;
+    text-align: center;
+    left: 50%;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Safari */
+    transform: translateX(-50%);
+}
+
+#creditsBtn a{
+    font-family: 'Vollkorn', sans-serif;
+    font-style:italic;
+    font-size:1em;
+    text-decoration: none;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#creditsBtn a:hover{
+    text-decoration: none;
+    opacity:.9;
+}
+
+/*/////////////////////////////////////////////*/
+
+/*LAYOUT & SIZING*/
+
+/*/////////////////////////////////////////////*/
+
+.arrayObject {
+    position:relative;
+}
+
+.arrayObject a {
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.objectContainer {
+	height: 100%;
+	display:inline-block;
+	padding: 1%;
+}
+
+#arrayNotebooks {
+	width:35%;
+}
+
+#objectNotebooks {
+	/*background-image: url("../assets/images/array/notebooks-array@2x.png");*/
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+    width:100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+    width: 100%;
+    /*height:382px;*/
+    height:100%;
+}
+
+#arrayPhotos {
+	width:12%;
+	width: 12%;
+}
+
+#objectPhotos {
+	/*background-image: url("../assets/images/array/photos-array@2x.png");*/
+    background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+    width:100%;
+    /*height:136px;*/
+    height:100%;
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-46%); /* IE 9 */
+    -webkit-transform: translateY(-46%); /* Safari */
+    transform: translateY(-46%);
+    /*position:relative;
+    -webkit-transform: translateY(-70%);
+    transform: translateY(-70%);*/
+}
+
+
+
+.arrayObject {
+	-o-transition:opacity .2s ease-out, background 2s ease-in;
+  	-ms-transition:opacity .2s ease-out, background 2s ease-in;
+  	-moz-transition:opacity .2s ease-out, background 2s ease-in;
+  	-webkit-transition:opacity .2s ease-out, background 2s ease-in;
+  	transition:opacity .2s ease-out, background 2s ease-in;
+}
+
+.arrayObject:hover {
+	opacity:.8;
+	cursor: pointer;
+}
+
+#objects {
+	height:100%;
+}
+
+
+#objects .container {
+	height:100%;
+}
+
+#objects .row {
+	height:50%;
+}
+
+
+/*/////////////////////////////////////////////*/
+
+/*TYPOGRAPHY*/
+
+/*/////////////////////////////////////////////*/
+
+
+#intro h2 {
+    color: #fff;
+    margin: 20% 0;
+    text-align: center;
+    font-family: 'Vollkorn', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 2.5em;
+ }
+
+ .modal-body section {
+ 	padding-left: 3em;
+ 	padding-right: 3em;
+    padding-bottom: 3em;
+    padding-top: 4em;
+ }
+
+section p {
+    font-family: 'Vollkorn', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: .8em;
+    line-height: 1.7em;
+}
+
+.headings > h1 {
+    font-family: 'Vollkorn', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style:italic;
+}
+
+.headings > h2 {
+    font-family: 'Vollkorn', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
+    line-height: 1.7em;
+}
+
+
+/*NAVBAR*/
+
+
+.navbar-left {
+    padding:0;
+    text-transform: uppercase;
+}
+
+.navbar-inverse {
+	border-color: #000;
+	background-color: #000;
+	height:40px;
+}
+
+.navbar {
+	min-height:40px;
+	max-height:40px;
+}
+
+.navbar .title h1 {
+	margin-top:11px;
+}
+
+.navbar-link {
+	font-size:12px;
+	position: absolute;
+    top: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-link:hover {
+	color:#fff;
+	text-decoration:none;
+}
+
+.navbar-text {
+	margin-top:11px;
+}
+
+.share {
+	font-size: 12px;
+	margin-top: 9px;
+}
+
+.share a {
+    text-decoration: none;
+}
+
+#mute, #fullscreen {
+	color:#000;
+	opacity:.5;
+}
+
+#mute:hover, #fullscreen:hover {
+	opacity:1;
+}
+
+.fa {
+	color:#fff;
+	opacity:.5;
+}
+
+.fa:hover {
+	opacity:1;
+	cursor: pointer;
+}
+
+
+.fa-twitter {
+    position: relative;
+    top: 1px;
+    font-size:16px;
+    margin-left:3px;
+}
+
+.fa-twitter:hover {
+    color:#fff;
+}
+
+.fa-facebook:hover {
+    color:#fff;
+}
+
+.navbar-right {
+    width:12%
+}
+
+/*ARRAY LETTERS*/
+
+.letters {
+    position:absolute;
+    font-family: 'Vollkorn', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-style: italic;
+    font-size:18px;
+    color:#fff;
+}
+
+#arrowtoA {
+    position:relative;
+    left:-12px;
+    top:0px;
+    /*background-image: url("../assets/images/arrow-to-a@2x.png");*/
+    background-size:35px 38px;
+    width:35px;
+    height:38px;
+}
+
+
+#letterA {
+    top:15px;
+    left:30px;
+}
+
+#letterB {
+    top:24%;
+    left:0%;
+}
+
+#letterC {
+    top:25%;
+    left:7%;
+}
+
+#letterD {
+    top:26%;
+    left:5%;
+}
+
+#letterE {
+    top:10%;
+    left:-4%;
+}
+
+#letterF {
+    top:17%;
+    left:20%;
+}
+
+#letterG {
+    top:0%;
+    left:-4%;
+}
+
+#letterH {
+    top:-20%;
+    left:-10%;
+}
+
+#letterI {
+    top:8%;
+    left:-4%;
+}
+
+#letterJ {
+    top:2%;
+    left:48%;
+}
+
+
+/*link on credit page*/
+
+#credits section p a {
+    color: #de001f;
+    text-decoration: underline !important;
+}
+
+#credits section p a:hover {
+    opacity:.8;
+}
+
+#credits li a {
+    color: #de001f;
+    text-decoration: underline !important;
+}
+
+#credits li a:hover {
+    opacity:.8;
+}
+
+#credits section h2 {
+    font-size: 1em;
+}
+
+#credits section.creditsNames {
+    text-align:center;
+}
+
+#credits section.creditsNames ul {
+    list-style: none;
+    font-family: 'Vollkorn', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: .8em;
+    line-height: 1.7em;
+    padding-left:0px;
+}
+
+
+/*/////////////////////////////////////////////*/
+
+/*MOBILE*/
+
+/*/////////////////////////////////////////////*/
+
+@media only screen and (min-device-width : 1024px) {
+
+#headphonesPreload:hover {
+    background-position: -970px 0px;
+    cursor:pointer;
+}
+
+}
+
+
+@media only screen and (max-width: 1024px) and (min-device-width : 768px) {
+
+/*
+    article {
+    overflow-y:scroll !important;
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    }
+*/
+
+    #continueBtn {
+        bottom: 4%
+    }
+
+    #notebooks .notebook-controls {
+        width: 95%;
+    }
+
+    .modal-body section {
+        width:70%;
+    }
+
+    .tape-stack {
+        left: 47%;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    h2.quote {
+        font-size: 1.35em;
+    }
+
+    .headings h1 {
+        font-size:3em;
+    }
+
+    .fa-twitter {
+        margin-left:16px;
+    }
+
+    .fa-facebook {
+        margin-left:18px;
+    }
+
+    .glyphicon-volume-up {
+        margin-right:10px;
+    }
+
+    #map section > ul {
+        font-size:.8em;
+    }
+}
+
+
+@media only screen and (max-device-height : 600px)  {
+
+/*
+    article {
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    overflow-y:scroll !important;
+    }
+*/
+
+    #intro .question {
+        margin: 18% 0;
+    }
+
+    #intro .title-card {
+        top:30%;
+    }
+
+}
+
+
+@media only screen and (max-device-width : 736px) and (min-device-width : 414px)  {
+
+
+    html {
+        background-image: url("../assets/images/background-woodtexture@2x.jpg");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    body {
+        padding-bottom:0px;
+    }
+
+/*
+    article {
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    overflow-y:scroll !important;
+    }
+*/
+
+    /*///////////////////////////////*/
+    /*Common Elements*/
+    /*///////////////////////////////*/
+
+    .branding.reactionary {
+        background-image: url("../assets/images/reactionary-logo@1x.png");
+        background-size: 75px 16px;
+        position: fixed;
+        width: 75px;
+        height: 16px;
+    }
+
+    .modal-body section {
+        width: 80%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .modal-body section p {
+        margin-bottom:0;
+    }
+
+    article .scroll-indicator {
+        bottom: 7%;
+    }
+
+    article .scroll-indicator p {
+        margin-top: 25px;
+    }
+
+    .buttons-wrapper .next-button {
+        clear: both;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
+
+    .buttons-wrapper .previous-button {
+        clear: both;
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    /*///////////////////////////////*/
+    /*Navbar*/
+    /*///////////////////////////////*/
+
+    .share {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .fa-twitter {
+        font-size: 18px;
+        top:3px;
+        margin-left:16px;
+    }
+
+    .glyphicon-volume-up {
+        margin-right:10px;
+        font-size:18px;
+    }
+
+
+    .navbar-left {
+        margin-left: 15px;
+        display: inline-block;
+    }
+
+    .navbar .title {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        display: inline-block;
+        width: 20%;
+    }
+
+    .navbar .utils span, .navbar .utils a {
+        margin-left:15px;
+    }
+
+    .navbar-link {
+        font-size: 10px;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Intro*/
+    /*///////////////////////////////*/
+
+    #intro .title-card {
+    max-width:90%;
+    height:auto;
+    min-height: 0%;
+    position: relative;
+    left: 50%;
+    top: 50%;    
+    -ms-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    opacity:0;
+    margin: 0;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    }
+
+    #intro .question {
+        font-size: 1.5em; /*larger*/
+    }
+
+    #intro .title-card h1 {
+        background-size: 431px 102px;
+        width: 431px;
+        height: 102px;
+        margin: 0% auto 5% auto;
+    }
+
+    #continueBtn {
+        bottom: 0%;
+        font-size: 1.3em;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Array*/
+    /*///////////////////////////////*/
+
+    .arrayObject {
+        height:80% !important;
+    }
+
+    .objectContainer {
+        width:95% !important;
+    }
+
+    #objects .row.array {
+        height:90% !important;
+        width:100% !important;
+        display:inline;
+    }
+
+    #objects .container {
+        height: 95%;
+    }
+
+    #arrowtoA {
+        /*background-image: url("../assets/images/arrow-to-a@1x.png");*/
+        background-size:17px 19px;
+        width:17px;
+        height:19px;
+        left:-20px;
+        top:-3px;
+    }
+
+    #objectLetter {
+        right: 0%;
+    }
+
+    #objectDV {
+        background-size: 50% auto;
+    }
+
+    .letters {
+        top:0% !important;
+        left:0% !important;
+        font-size:1em !important;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Notebooks*/
+    /*///////////////////////////////*/
+
+    #notebook-pile {
+        background-size: 400px 307px;
+        width: 400px;
+        height: 307px;
+    }
+
+    .headings > h2.quote {
+        line-height: 1.3em;
+    }
+
+    #notebooks .headings {
+        top:42%;
+    }
+
+    #bookShadow {
+        width: 400px;
+    }
+
+    #bookWriting {
+        width: 400px;
+    }
+
+    #notebookOtherPages {
+        width: 400px;
+        height: 266px;
+    }
+
+    #notebooks .notebook-controls a {
+        width:30px;
+        font-size:.5em;
+    }
+
+    #notebooks .notebook-controls img {
+        width: 20px;
+        height: 21px;
+    }
+
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+
+    html {
+        background-image: url("../assets/images/background-woodtexture@2x.jpg");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    body {
+        padding-bottom:0px;
+    }
+
+/*
+    article {
+    overflow-y:scroll !important;
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    }
+*/
+
+
+    /*///////////////////////////////*/
+    /*Common Elements*/
+    /*///////////////////////////////*/
+
+    .branding.reactionary {
+        background-image: url("../assets/images/reactionary-logo@1x.png");
+        background-size: 75px 16px;
+        position: fixed;
+        width: 75px;
+        height: 16px;
+    }
+
+    .modal-body section {
+        width: 80%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .modal-body section p {
+        margin-bottom:0;
+    }
+
+    article .scroll-indicator {
+        bottom: 7%;
+    }
+
+    article .scroll-indicator p {
+        margin-top: 25px;
+    }
+
+    .buttons-wrapper .next-button {
+        clear: both;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
+
+    .buttons-wrapper .previous-button {
+        clear: both;
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    /*///////////////////////////////*/
+    /*Navbar*/
+    /*///////////////////////////////*/
+
+    .share {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .fa-twitter {
+        font-size: 18px;
+        top:3px;
+        margin-left:16px;
+    }
+
+    .glyphicon-volume-up {
+        margin-right:10px;
+        font-size:18px;
+    }
+
+
+    .navbar-left {
+        margin-left: 15px;
+        display: inline-block;
+    }
+
+    .navbar .title {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        font-size: 12px;
+        position: absolute;
+        right: 0px;
+        display: inline-block;
+        width: 20%;
+    }
+
+    .navbar .utils span, .navbar .utils a {
+        margin-left:15px;
+    }
+
+    .navbar-link {
+        font-size: 10px;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Intro*/
+    /*///////////////////////////////*/
+
+    #intro .title-card {
+    max-width:90%;
+    height:auto;
+    min-height: 0%;
+    position: relative;
+    left: 50%;
+    top: 50%;    
+    -ms-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    opacity:0;
+    margin: 0;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    }
+
+    #intro .question {
+        font-size: 1.5em; /*larger*/
+    }
+
+    #intro .title-card h1 {
+        background-size: 431px 102px;
+        width: 431px;
+        height: 102px;
+        margin: 0% auto 5% auto;
+    }
+
+    #continueBtn {
+        bottom: 0%;
+        font-size: 1.3em;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Array*/
+    /*///////////////////////////////*/
+
+    .arrayObject {
+        height:80% !important;
+    }
+
+    .objectContainer {
+        width:95% !important;
+    }
+
+    #objects .row.array {
+        height:90% !important;
+        width:100% !important;
+        display:inline;
+    }
+
+    #objects .container {
+        height: 95%;
+    }
+
+    #arrowtoA {
+        background-image: url("../assets/images/arrow-to-a@2x.png");
+        background-size:17px 19px;
+        width:17px;
+        height:19px;
+        left:-20px;
+        top:-3px;
+    }
+
+    #objectLetter {
+        right: 0%;
+    }
+
+    #objectDV {
+        background-size: 50% auto;
+    }
+
+    .letters {
+        top:0% !important;
+        left:0% !important;
+        font-size:1em !important;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Notebooks*/
+    /*///////////////////////////////*/
+
+    #notebook-pile {
+        background-size: 400px 307px;
+        width: 400px;
+        height: 307px;
+    }
+
+    .headings > h2.quote {
+        line-height: 1.3em;
+    }
+
+    #notebooks .headings {
+        top:42%;
+    }
+
+    #bookShadow {
+        width: 400px;
+    }
+
+    #bookWriting {
+        width: 400px;
+    }
+
+    #notebookOtherPages {
+        width: 400px;
+        height: 266px;
+    }
+
+    #notebooks .notebook-controls a {
+        width:30px;
+        font-size:.5em;
+    }
+
+    #notebooks .notebook-controls img {
+        width: 20px;
+        height: 21px;
+    }
+
+}
+
+@media (max-width: 568px) {
+
+    html {
+        /*background-image: url("../assets/images/background-woodtexture@2x.jpg");*/
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    body {
+        padding-bottom:0px;
+    }
+
+/*
+    article {
+    overflow-y:scroll !important;
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    }
+*/
+
+    /*///////////////////////////////*/
+    /*Common Elements*/
+    /*///////////////////////////////*/
+
+    .branding.reactionary {
+        background-image: url("../assets/images/reactionary-logo@1x.png");
+        background-size: 75px 16px;
+        position: fixed;
+        width: 75px;
+        height: 16px;
+    }
+
+    .modal-body section {
+        width: 80%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .modal-body section p {
+        margin-bottom:0;
+    }
+
+    article .scroll-indicator {
+        bottom: 7%;
+    }
+
+    article .scroll-indicator p {
+        margin-top: 25px;
+    }
+
+    .buttons-wrapper .next-button {
+        clear: both;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
+
+    .buttons-wrapper .previous-button {
+        clear: both;
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    /*///////////////////////////////*/
+    /*Navbar*/
+    /*///////////////////////////////*/
+
+    .share {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .fa-twitter {
+        font-size: 18px;
+        top:3px;
+        margin-left:16px;
+    }
+
+    .glyphicon-volume-up {
+        margin-right:10px;
+        font-size:18px;
+    }
+
+    .fa-facebook {
+        font-size: 14px;
+        position: relative;
+        top: 2px;
+        margin-left:18px;
+    }
+
+    .navbar-left {
+        margin-left: 15px;
+        display: inline-block;
+    }
+
+    .navbar .title {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        font-size: 12px;
+        position: absolute;
+        right: 35px;
+        display: inline-block;
+        width: 20%;
+    }
+
+    .navbar .utils span, .navbar .utils a {
+        margin-left:15px;
+    }
+
+    .navbar-link {
+        font-size: 10px;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Intro*/
+    /*///////////////////////////////*/
+
+    #intro .title-card {
+    max-width:90%;
+    height:auto;
+    min-height: 0%;
+    position: relative;
+    left: 50%;
+    top: 50%;    
+    -ms-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    opacity:0;
+    margin: 0;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    }
+
+    #intro .question {
+        font-size: 1.25em;
+    }
+
+    #intro .title-card h1 {
+        background-size: 431px 102px;
+        width: 431px;
+        height: 102px;
+        margin: 0% auto 5% auto;
+    }
+
+    #continueBtn {
+        bottom: 0%;
+        font-size: 1.3em;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Array*/
+    /*///////////////////////////////*/
+
+    .arrayObject {
+        height:80% !important;
+    }
+
+    .objectContainer {
+        width:95% !important;
+    }
+
+    #objects .row.array {
+        height:90% !important;
+        width:100% !important;
+        display:inline;
+    }
+
+    #objects .container {
+        height: 95%;
+    }
+
+    #arrowtoA {
+        background-image: url("../assets/images/arrow-to-a@2x.png");
+        background-size:17px 19px;
+        width:17px;
+        height:19px;
+        left:-20px;
+        top:-3px;
+    }
+
+    #objectLetter {
+        right: 0%;
+    }
+
+    #objectDV {
+        background-size: 50% auto;
+    }
+
+    .letters {
+        top:0% !important;
+        left:0% !important;
+        font-size:1em !important;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Notebooks*/
+    /*///////////////////////////////*/
+
+    #notebook-pile {
+        background-size: 400px 307px;
+        width: 400px;
+        height: 307px;
+    }
+
+    .headings > h2.quote {
+        line-height: 1.3em;
+    }
+
+    #notebooks .headings {
+        top:42%;
+    }
+
+    #bookShadow {
+        width: 400px;
+    }
+
+    #bookWriting {
+        width: 400px;
+    }
+
+    #notebookOtherPages {
+        width: 400px;
+        height: 266px;
+    }
+
+    #notebooks .notebook-controls a {
+        width:30px;
+        font-size:.5em;
+    }
+
+    #notebooks .notebook-controls img {
+        width: 20px;
+        height: 21px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    html {
+        background-image: url("../assets/images/background-woodtexture@2x.jpg");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    body {
+        padding-bottom:0px;
+    }
+
+/*
+    article {
+    overflow-y:scroll !important;
+    ms-overflow-style: auto !important;
+    overflow-scrolling: auto !important;
+    -webkit-overflow-scrolling: auto !important;
+    }
+*/
+
+    /*///////////////////////////////*/
+    /*Common Elements*/
+    /*///////////////////////////////*/
+
+    .branding.reactionary {
+        background-image: url("../assets/images/reactionary-logo@1x.png");
+        background-size: 75px 16px;
+        position: fixed;
+        width: 75px;
+        height: 16px;
+    }
+
+    .modal-body section {
+        width: 80%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .modal-body section p {
+        margin-bottom:0;
+    }
+
+    article .scroll-indicator {
+        bottom: 7%;
+    }
+
+    article .scroll-indicator p {
+        margin-top: 25px;
+    }
+
+    .buttons-wrapper .next-button {
+        clear: both;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
+
+    .buttons-wrapper .previous-button {
+        clear: both;
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+    }
+
+    /*///////////////////////////////*/
+    /*Navbar*/
+    /*///////////////////////////////*/
+
+    .share {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .fa-twitter {
+        font-size: 18px;
+        top:3px;
+        margin-left:16px;
+    }
+
+    .glyphicon-volume-up {
+        margin-right:10px;
+        font-size:18px;
+    }
+
+    .navbar-left {
+        margin-left: 15px;
+        display: inline-block;
+    }
+
+    .navbar .title {
+        display: inline-block;
+    }
+
+    .navbar-right {
+        font-size: 12px;
+        position: absolute;
+        right: 35px;
+        display: inline-block;
+        width: 20%;
+    }
+
+    .navbar .utils span, .navbar .utils a {
+        margin-left:15px;
+    }
+
+    .navbar-link {
+        font-size: 10px;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Intro*/
+    /*///////////////////////////////*/
+
+    #intro .title-card {
+    max-width:90%;
+    height:auto;
+    min-height: 0%;
+    position: relative;
+    left: 50%;
+    top: 50%;    
+    -ms-transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    opacity:0;
+    margin: 0;
+    /*margin-right: auto;
+    margin-left: auto;*/
+    }
+
+    #intro .question {
+        font-size: 1.25em;
+    }
+
+    #intro .title-card h1 {
+        background-size: 431px 102px;
+        width: 431px;
+        height: 102px;
+        margin: 0% auto 5% auto;
+    }
+
+    #continueBtn {
+        bottom: 0%;
+        font-size: 1.3em;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Array*/
+    /*///////////////////////////////*/
+
+    .arrayObject {
+        height:80% !important;
+    }
+
+    .objectContainer {
+        width:95% !important;
+    }
+
+    #objects .row.array {
+        height:90% !important;
+        width:100% !important;
+        display:inline;
+    }
+
+    #objects .container {
+        height: 95%;
+    }
+
+    #arrowtoA {
+        background-image: url("../assets/images/arrow-to-a@2x.png");
+        background-size:17px 19px;
+        width:17px;
+        height:19px;
+        left:-20px;
+        top:-3px;
+    }
+
+    #objectLetter {
+        right: 0%;
+    }
+
+    #objectDV {
+        background-size: 50% auto;
+    }
+
+    .letters {
+        top:0% !important;
+        left:0% !important;
+        font-size:1em !important;
+    }
+
+
+    /*///////////////////////////////*/
+    /*Notebooks*/
+    /*///////////////////////////////*/
+
+    #notebook-pile {
+        background-size: 400px 307px;
+        width: 400px;
+        height: 307px;
+    }
+
+    .headings > h2.quote {
+        line-height: 1.3em;
+    }
+
+    #notebooks .headings {
+        top:42%;
+    }
+
+    #bookShadow {
+        width: 400px;
+    }
+
+    #bookWriting {
+        width: 400px;
+    }
+
+    #notebookOtherPages {
+        width: 400px;
+        height: 266px;
+    }
+
+    #notebooks .notebook-controls a {
+        width:30px;
+        font-size:.5em;
+    }
+
+    #notebooks .notebook-controls img {
+        width: 20px;
+        height: 21px;
+    }
+
+}
+
+

@@ -1,0 +1,122 @@
+/***
+intro
+***/
+
+#intro {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#intro .headings {
+    pointer-events: all;
+}
+
+#intro section {
+    margin-bottom: 60%;
+}
+
+#intro .background-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+}
+
+#intro .background {
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#intro .begin {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#intro .question {
+    margin: 20% 0;
+    text-align: center;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    line-height: 2em;
+}
+
+#intro .question span {
+    font-family: 'Vollkorn', sans-serif;
+    font-style:italic;
+    font-size:1.75em;
+    text-decoration: none;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+}
+
+#intro .title-card {
+    position: fixed;
+    width:100%;
+    left: 50%;
+    top: 50%;    
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    pointer-events: none;
+}
+
+#intro .title-card h1 {
+    background: url('../assets/images/intro/title@2x.png');
+    background-size: 627px 148px;
+    text-align: center;
+    height: 148px;
+    width: 627px;
+    max-width: 100%;
+    margin: 22% auto 5% auto;
+}
+
+#intro .title-card.fade-in h1,
+#intro .title-card.fade-in h3,
+#intro .title-card.fade-in a {
+    pointer-events: all;
+}
+
+#headphonesPreload {
+    background: url('../assets/images/preloader-sprites@2x.png');
+    /*1650 284*/
+    background-size: 1164px 200px;
+    background-position: -776px 0px;
+    width:194px;
+    height:200px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor:pointer;
+}
+
+#continueBtn {
+    position: relative;
+    top: 0%;
+    width: 200px;
+    text-align: center;
+    left: 50%;
+    -ms-transform: translateX(-50%); /* IE 9 */
+    -webkit-transform: translateX(-50%); /* Safari */
+    transform: translateX(-50%);
+    z-index:999;
+}
+
+#continueBtn a{
+    font-family: 'Vollkorn', sans-serif;
+    font-style:italic;
+    font-size:1em;
+    text-decoration: none;
+    color:#fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#continueBtn a:hover{
+    text-decoration: none;
+    opacity:.7;
+}
