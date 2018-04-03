@@ -41,7 +41,7 @@ navbar
 .navbar {
     text-transform: uppercase;
     z-index: 1051;
-    
+
 }
 
 .navbar .title {
@@ -53,8 +53,8 @@ navbar
     transform: translateX(-50%);
     margin: 0;
     padding: 0;
-    
-    
+
+
 }
 
 .navbar .title h1 {
@@ -62,7 +62,7 @@ navbar
     font-size: 18px;
     /*margin-top: 10px;*/
     text-align: center;
-    
+
 }
 
 .navbar .title h1 a {
@@ -168,15 +168,15 @@ body.modal-open > #objects {
     height: 100%;
 }
 
-.modal-content, 
-.modal-dialog, 
-.modal-body { 
-    height: inherit; 
-    min-height: 100%; 
+.modal-content,
+.modal-dialog,
+.modal-body {
+    height: inherit;
+    min-height: 100%;
 }
 
-.modal { 
-    min-height: 100%; 
+.modal {
+    min-height: 100%;
 }
 
 article .scroll-indicator {
@@ -276,10 +276,10 @@ article.story {
 }
 
 .modal.in .modal-dialog {
-    
+
     width: 100%;
     margin: 0;
-    
+
     padding-bottom: 50px;
 }
 
@@ -469,5 +469,9 @@ article.story {
 }
 
 #notebooks .nav-obj-notebooks {
+    background-color: #FFF;
+}
+
+#brandywine .nav-obj-brandywine {
     background-color: #FFF;
 }
