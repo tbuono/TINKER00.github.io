@@ -1,0 +1,286 @@
+#brandy-photo-stack {
+    position:fixed;
+    width:513px;
+    height:550px;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.viewContainer {
+    position:fixed;
+    top:50%;
+    left:50%;
+    -ms-transform: translate(-50%, -55%); /* IE 9 */
+    -webkit-transform: translate(-50%, -55%); /* Safari */
+    transform: translate(-50%, -55%);
+    width:987px;
+    height:585px;
+    margin: 0 auto;
+    overflow:hidden;
+    z-index:1;
+
+    pointer-events: none;
+}
+
+.cameraView {
+    position:relative;
+    top:50%;
+    -ms-transform: translateY(-55%); /* IE 9 */
+    -webkit-transform: translateY(-55%); /* Safari */
+    transform: translateY(-55%);
+    width:987px;
+    height:585px;
+    margin: 0 auto;
+    overflow:hidden;
+    z-index:2;
+}
+
+#brandywine .viewfinderImage {
+    position:absolute;
+    top:0px;
+    left:0px;
+    /*background:url("../assets/images/object_museum_photos/camera-viewfinder@2x.png") 0px 0px;*/
+    background-size: 987px 585px;
+    width:987px;
+    height:585px;
+    z-index:3;
+}
+
+#foregroundImagemuseum {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    /*background:url("../assets/images/object_museum_photos/foreground-museum-sign@2x.png") 0px 0px;*/
+    background-size: 295px 442px;
+    background-position: 0px 0px;
+    width:295px;
+    height:442px;
+    z-index:2;
+    /*-webkit-transition: right 1s; 
+    -webkit-transition-timing-function: linear;
+    transition: right 1s;
+    transition-timing-function: linear;*/
+}
+
+#backgroundImagemuseum {
+    position:absolute;
+    bottom:0px;
+    left:-30px;
+    /*background:url("../assets/images/object_museum_photos/background-museum-sign@2x.jpg") 0px 0px;*/
+    background-size: 1140px 612px;
+    background-position: 0px 0px;
+    width:1140px;
+    height:612px;
+    z-index:1;
+}
+
+#foregroundImagemushrooms {
+    position:absolute;
+    bottom:0px;
+    right:135px;
+    /*background:url("../assets/images/object_museum_photos/foreground-mushrooms@2x.png") 0px 0px;*/
+    background-size: 310px 384px;
+    background-position: 0px 0px;
+    width:310px;
+    height:384px;
+    z-index:2;
+}
+
+#backgroundImagemushrooms {
+    position:absolute;
+    bottom:0px;
+    right:15px;
+    /*background:url("../assets/images/object_museum_photos/background-mushrooms@2x.jpg") 0px 0px;*/
+    background-size: 1140px 612px;
+    background-position: 0px 0px;
+    width:1140px;
+    height:612px;
+    z-index:1;
+}
+
+#foregroundImageenactor {
+    position:absolute;
+    bottom:0px;
+    right:10px;
+    /*background:url("../assets/images/object_museum_photos/foreground-enactor@2x.png") 0px 0px;*/
+    background-size: 551px 470px;
+    background-position: 0px 0px;
+    width:551px;
+    height:470px;
+    z-index:2;
+}
+
+#backgroundImageenactor {
+    position:absolute;
+    bottom:-10px;
+    left:-40px;
+    /*background:url("../assets/images/object_museum_photos/background-enactor@2x.jpg") 0px 0px;*/
+    background-size: 1140px 612px;
+    background-position: 0px 0px;
+    width:1140px;
+    height:612px;
+    z-index:1;
+}
+
+#foregroundImagestatue {
+    position:absolute;
+    bottom:0px;
+    left:-70px;
+    /*background:url("../assets/images/object_museum_photos/zoomed-out-statue@2x.jpg") 0px 0px;*/
+    background-size: 1140px 612px;
+    background-position: 0px 0px;
+    width:1140px;
+    height:612px;
+    z-index:2;
+}
+
+#backgroundImagestatue {
+    position:absolute;
+    bottom:0px;
+    left:-40px;
+    /*background:url("../assets/images/object_museum_photos/zoomed-in-statue@2x.jpg") 0px 0px;*/
+    background-size: 1140px 612px;
+    background-position: -20px 20px;
+    width:1140px;
+    height:612px;
+    z-index:1;
+}
+
+.flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+    opacity:0;
+
+    pointer-events: none;
+}
+
+.zoomIn {
+    position: absolute;
+    right: 235px;
+    top: 90px;
+    /*background:url("../assets/images/object_museum_photos/zoom-in-btn@2x.png") 0px 0px;*/
+    background-size: 150px 75px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    width:75px;
+    height:75px;
+    z-index:2;
+    opacity:0;
+
+    pointer-events: all;
+}
+
+#brandywine .modal-content {
+    z-index: 10;
+}
+
+#brandywine section {
+    margin-bottom: 50%;
+    z-index: 10;
+}
+
+
+#brandywine .camera {
+    background-color: #171616;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#brandywine .camera .photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#brandywine .camera .photo.active {
+}
+
+#brandywine .camera .photo.active .background-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 5% auto; /* centered with some minimum top and bottom margin */
+    height: 80%;
+    width: 80%;
+    z-index: 2;
+}
+
+#brandywine .camera .photo.active .foreground-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*
+#brandywine .camera .photo.active .foreground-image {
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+    width: 80%;
+
+    z-index: 3;
+}
+
+#brandywine.in-camera .camera {
+    display: block;
+}
+
+#brandywine .camera .viewfinder {
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: url('http://apps.frontline.org/inheritance/assets/images/camera-viewfinder@1x.png') 0px 0px;
+    background-size: 987px 585px;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+}
+
+#brandywine .camera .photo {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#brandywine .camera .photo.active {
+    display: block;
+}
+
+
+#brandywine .flash {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 15;
+}
+
+
+*/
