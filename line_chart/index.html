@@ -50,7 +50,7 @@ body {
   stroke: none;
   font-size: 10px;
   font-weight: bold;
-  fill: #000000;
+  fill: #E6E7E8;
 }
 
 .tooltip {
@@ -58,7 +58,7 @@ body {
 }
 
 .brush .extent {
-  stroke: #000000;
+  stroke: #E6E7E8;
   shape-rendering: crispEdges;
 }
 
@@ -181,6 +181,7 @@ d3.csv("data2.csv", function(error, data) {
   context.append("g") // Create brushing xAxis
       .attr("class", "x axis1")
       .attr("transform", "translate(0," + height2 + ")")
+      .attr("fill", "#E6E7E8")
       .call(xAxis2);
 
   var contextArea = d3.svg.area() // Set attributes for area chart in brushing context graph
@@ -194,30 +195,33 @@ d3.csv("data2.csv", function(error, data) {
     .attr("class", "area")
     .attr("d", contextArea(categories[0].values)) // pass first categories data .values to area path generator
     .attr("fill", "#000000");
-
+//E6E7E8
   //append the brush for the selection of subsection
   context.append("g")
     .attr("class", "x brush")
     .call(brush)
     .selectAll("rect")
     .attr("height", height2) // Make brush rects same height
-      .attr("fill", "#E6E7E8");
+      .attr("fill", "#000000");
   //end slider part-----------------------------------------------------------------------------------
 
   // draw line graph
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
+      .attr("fill", "#E6E7E8")
       .call(xAxis);
 
   svg.append("g")
       .attr("class", "y axis")
+      .attr("fill", "#E6E7E8")
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("x", -10)
       .attr("dy", ".71em")
+      .attr("fill", "#E6E7E8")
       .style("text-anchor", "end")
       .text("Greenness Keywords");
 
@@ -327,6 +331,7 @@ d3.csv("data2.csv", function(error, data) {
   var focus = issue.select("g") // create group elements to house tooltip text
       .data(columnNames) // bind each column name date to each g element
     .enter().append("g") //create one <g> for each columnName
+      .attr("fill", "#E6E7E8")
       .attr("class", "focus");
 
   focus.append("text") // http://stackoverflow.com/questions/22064083/d3-js-multi-series-chart-with-y-value-tracking
