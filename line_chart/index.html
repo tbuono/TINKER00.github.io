@@ -14,7 +14,7 @@ body {
 .axis1 path,
 .axis1 line {
   fill: none;
-  stroke: #FFFFFF;
+  stroke: #000000;
   shape-rendering: crispEdges;
 }
 
@@ -50,7 +50,7 @@ body {
   stroke: none;
   font-size: 10px;
   font-weight: bold;
-  fill: #FFFFFF;
+  fill: #000000;
 }
 
 .tooltip {
@@ -58,7 +58,7 @@ body {
 }
 
 .brush .extent {
-  stroke: #FFF;
+  stroke: #000000;
   shape-rendering: crispEdges;
 }
 
@@ -269,7 +269,7 @@ d3.csv("data2.csv", function(error, data) {
         issue.select("rect")
           .transition()
           .attr("fill", function(d) {
-          return d.visible ? color(d.name) : "#F1F1F2";
+          return d.visible ? color(d.name) : "#000000";
         });
       })
 
@@ -289,7 +289,7 @@ d3.csv("data2.csv", function(error, data) {
         d3.select(this)
           .transition()
           .attr("fill", function(d) {
-          return d.visible ? color(d.name) : "#F1F1F2";});
+          return d.visible ? color(d.name) : "#000000";});
 
         d3.select("#line-" + d.name.replace(" ", "").replace("/", ""))
           .transition()
@@ -318,7 +318,7 @@ d3.csv("data2.csv", function(error, data) {
             .attr("class", "hover-text")
             .attr("y", height - (height-40)) // hover date text position
             .attr("x", width - 150) // hover date text position
-            .style("fill", "#E6E7E8");
+            .style("fill", "#000000");
 
   var columnNames = d3.keys(data[0]) //grab the key values from your first data row
                                      //these are the same as your column names
