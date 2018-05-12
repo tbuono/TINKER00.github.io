@@ -193,7 +193,7 @@ d3.csv("data2.csv", function(error, data) {
   context.append("path") // Path is created using svg.area details
     .attr("class", "area")
     .attr("d", contextArea(categories[0].values)) // pass first categories data .values to area path generator
-    .attr("fill", "#F1F1F2");
+    .attr("fill", "#000000");
 
   //append the brush for the selection of subsection
   context.append("g")
