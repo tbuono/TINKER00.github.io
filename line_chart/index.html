@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Vollkorn', sans-serif;
+  font-size: 10px;
 }
 
 .axis path,
@@ -23,7 +24,7 @@ body {
 
 .line {
   fill: none;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 
 .legend-box {
@@ -38,7 +39,7 @@ body {
 .hover-line {
   stroke: #E6E7E8;
   fill: none;
-  stroke-width: 1px;
+  stroke-width: 5px;
   left: 10px;
   shape-rendering: crispEdges;
   opacity: 1e-6;
@@ -46,7 +47,7 @@ body {
 
 .hover-text {
   stroke: none;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bold;
   fill: #FFFFFF;
 }
@@ -139,7 +140,7 @@ svg.append("defs")
 
 //end slider part-----------------------------------------------------------------------------------
 
-d3.csv("data.csv", function(error, data) {
+d3.csv("data2.csv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { // Set the domain of the color ordinal scale to be all the csv headers except "date", matching a color to an issue
     return key !== "date";
   }));
@@ -217,7 +218,7 @@ d3.csv("data.csv", function(error, data) {
       .attr("x", -10)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("LEED Points");
+      .text("Greenness Keywords");
 
   var issue = svg.selectAll(".issue")
       .data(categories) // Select nested data and append to new svg group elements
