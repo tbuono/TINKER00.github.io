@@ -5,7 +5,7 @@
 <style>
 
 body {
-  font: 9px sans-serif;
+  font-family: 'Vollkorn', sans-serif;
 }
 
 .axis path,
@@ -13,7 +13,7 @@ body {
 .axis1 path,
 .axis1 line {
   fill: none;
-  stroke: #E6E7E8;
+  stroke: #FFFFFF;
   shape-rendering: crispEdges;
 }
 
@@ -139,7 +139,7 @@ svg.append("defs")
 
 //end slider part-----------------------------------------------------------------------------------
 
-d3.csv("data2.csv", function(error, data) {
+d3.csv("data.csv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { // Set the domain of the color ordinal scale to be all the csv headers except "date", matching a color to an issue
     return key !== "date";
   }));
