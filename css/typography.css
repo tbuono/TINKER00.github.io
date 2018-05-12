@@ -148,7 +148,7 @@ article {
 }
 
 #arrayNotebooks {
-	width:35%;
+	width:25%;
 }
 
 #objectNotebooks {
@@ -157,6 +157,7 @@ article {
 	background-size:contain;
 	background-position:center;
     width:100%;
+    top:15%;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -166,8 +167,7 @@ article {
 }
 
 #arrayPhotos {
-	width:12%;
-	width: 12%;
+	width: 15%;
 }
 
 #objectPhotos {
@@ -179,7 +179,7 @@ article {
     /*height:136px;*/
     height:100%;
     position:relative;
-    top:50%;
+    top:60%;
     -ms-transform: translateY(-46%); /* IE 9 */
     -webkit-transform: translateY(-46%); /* Safari */
     transform: translateY(-46%);
@@ -379,13 +379,13 @@ section p {
 
 
 #letterA {
-    top:15px;
+    top:5px;
     left:30px;
 }
 
 #letterB {
-    top:24%;
-    left:0%;
+    top:5px;
+    left:30px;
 }
 
 #letterC {
@@ -688,7 +688,7 @@ section p {
     min-height: 0%;
     position: relative;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     -ms-transform: translate(-50%, -45%);
     -webkit-transform: translate(-50%, -45%);
     transform: translate(-50%, -45%);
@@ -929,7 +929,7 @@ section p {
     min-height: 0%;
     position: relative;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     -ms-transform: translate(-50%, -45%);
     -webkit-transform: translate(-50%, -45%);
     transform: translate(-50%, -45%);
@@ -1175,7 +1175,7 @@ section p {
     min-height: 0%;
     position: relative;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     -ms-transform: translate(-50%, -45%);
     -webkit-transform: translate(-50%, -45%);
     transform: translate(-50%, -45%);
@@ -1414,7 +1414,7 @@ section p {
     min-height: 0%;
     position: relative;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     -ms-transform: translate(-50%, -45%);
     -webkit-transform: translate(-50%, -45%);
     transform: translate(-50%, -45%);
@@ -1529,4 +1529,3 @@ section p {
     }
 
 }
-
