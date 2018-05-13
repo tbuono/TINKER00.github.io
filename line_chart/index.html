@@ -53,8 +53,10 @@ body {
   fill: #E6E7E8;
 }
 
+
 .tooltip {
   font-weight: normal;
+  opacity: 1e-6;
 }
 
 .brush .extent {
@@ -125,13 +127,14 @@ svg.append("rect")
     .attr("y", 0)
     .attr("id", "mouse-tracker")
     .style("fill", "black")
-    .style("opacity", 0.5);
+    .style("opacity", 0.2);
 
 //for slider part-----------------------------------------------------------------------------------
 
 var context = svg.append("g") // Brushing context box container
     .attr("transform", "translate(" + 0 + "," + 410 + ")")
-    .attr("class", "context");
+    .attr("class", "context")
+    .style("opacity", 0.2);
 
 //append clip path for lines plotted, hiding those part out of bounds
 svg.append("defs")
