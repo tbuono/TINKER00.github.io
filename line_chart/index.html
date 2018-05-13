@@ -228,7 +228,8 @@ d3.csv("data2.csv", function(error, data) {
   var issue = svg.selectAll(".issue")
       .data(categories) // Select nested data and append to new svg group elements
     .enter().append("g")
-      .attr("class", "issue");
+      .attr("class", "issue")
+      .attr("fill", "#E6E7E8");
 
   issue.append("path")
       .attr("class", "line")
@@ -251,7 +252,7 @@ d3.csv("data2.csv", function(error, data) {
       .attr("x", width + (margin.right/3) - 15)
       .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace) - 8; })  // spacing
       .attr("fill",function(d) {
-        return d.visible ? color(d.name) : "#F1F1F2"; // If array key "visible" = true then color rect, if not then make it grey
+        return d.visible ? color(d.name) : "#000000"; // If array key "visible" = true then color rect, if not then make it grey
       })
       .attr("class", "legend-box")
 
