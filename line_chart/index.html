@@ -230,6 +230,7 @@ d3.csv("data2.csv", function(error, data) {
       .style("text-anchor", "end")
       .text("Greenness Keywords");
 
+//Edit keyword text
   var issue = svg.selectAll(".issue")
       .data(categories) // Select nested data and append to new svg group elements
     .enter().append("g")
@@ -251,15 +252,20 @@ d3.csv("data2.csv", function(error, data) {
   // draw legend
   var legendSpace = 450 / categories.length; // 450/number of issues (ex. 40)
 
+//edit the boxes beside the keyword text
   issue.append("rect")
       .attr("width", 20)
       .attr("height", 10)
+      .style("stroke-width", 1)
       .attr("x", width + (margin.right/3) - 15)
       .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace) - 8; })  // spacing
       .attr("fill",function(d) {
         return d.visible ? color(d.name) : "#000000"; // If array key "visible" = true then color rect, if not then make it grey
       })
       .attr("class", "legend-box")
+      .style("opacity", 0.2)
+
+
 
       .on("click", function(d){ // On click make d.visible
         d.visible = !d.visible; // If array key for this data selection is "visible" = true then make it false, if false then make it true
