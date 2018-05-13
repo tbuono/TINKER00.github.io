@@ -1,0 +1,72 @@
+#davidJerusalem {
+    width:600px;
+    height:424px;
+    margin-bottom:60%;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+#letter section {
+    margin-bottom: 50%;
+}
+
+#letter section.letter-map {
+    margin-bottom: 70%;
+}
+
+
+#letter section.white {
+    margin-bottom: 60%;
+}
+
+/* Backgrounds */
+#letter .background-overlay {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#letter .background {
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+#letter .background.background-white {
+    background: #fff;
+}
+
+#letter .surface {
+    z-index: 0; /* keep in front of backgrounds */
+}
+
+#letter .letter-quote p {
+    color: #fff;
+    font-size: 1.2em;
+    font-style: italic;
+    padding: 1.4em;
+    text-align: center;
+}
+
+#letter section.letter-open {
+    margin-bottom: 100%;
+}
+
+#letterObject {
+    width:655px;
+    height:387px;
+    top:38%;
+    left:50%;
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Safari */
+    transform: translate(-50%, -50%);
+}
+
+#letterObjectOpen {
+    width:677px;
+    height:471px;
+    margin-top: 2%;
+    /*top:38%;
+    left:45%;
+    -ms-transform: translate(-50%, -50%); 
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
+}
+
