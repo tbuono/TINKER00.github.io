@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Panama Casco Viejo</title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+		<style>
+			html, body, #map {
+		    	height: 100%;
+		    	padding: 0;
+		    	margin: 0;
+		    }       
+			/* Customize legend box's position and style */
+				.cartodb-legend{
+				    left: 20px;
+				    bottom: -50px!important;
+				    width: 200px;
+				    height: auto;
+				    background-color: #FFF;
+				    opacity: 1;
+				    font-family: "Lato" !important;        
+				}
+				.cartodb-legend ul li .bullet{
+				    margin-left: 5px!important;
+				    font-style: normal!important;
+				    font-size: 8px!important;
+				    font-family: "Lato" !important;
+				   	color:#bcbcbc !important；
+				}
+
+
+				.cartodb-legend wrapper{
+				    outline-color: transparent!important;
+				    outline-style: none!important;
+				    box-shadow: transparent!important;
+				    border-bottom-color: transparent!important;
+				    border-top-color: transparent!important;
+				    outline-color: transparent!important;
+				    text-shadow: none!important;
+				    box-decoration-break: none!important;
+				    box-shadow: none!important;
+				}		
+				#map .cartodb-legend-stack { 
+						position: absolute; 
+						background: none; 
+						padding: 250px; 
+						z-index: 600; 
+						bottom: auto; 
+						right:-165px;
+						border-radius: 0!important; 
+						border-color: transparent; 
+						box-shadow: none; 
+						text-shadow: none;
+
+				}
+
+			/* Customize the layer_selector's location，color(ul),font(li),hover and selected effect */
+				#layer_selector {
+					position: absolute;
+					top: 100px;
+					right: 150px;
+					padding: 0;
+					z-index: 600;
+					background-color:#0f0f0f;
+				}
+				#layer_selector ul {
+					padding: 0; margin: 0;
+					list-style-type: none;				
+				}
+				#layer_selector li {
+					border-bottom: 1px solid #999;
+					padding: 10px 15px;
+					font-family: "Lato";
+					font-size: 10px;
+					color: #bcbcbc;
+					cursor: auto;
+					display:inline-block;
+
+				}
+				#layer_selector li:hover {
+					background-color: #3a3a3a;
+					cursor: pointer;
+				}
+				#layer_selector li.selected {
+					background-color: black;
+					cursor: pointer;
+					z-index: 600;
+					background-color: #000000;
+				}
+
+			/* customize the tooltip style */
+				.cartodb-tooltip-content-wrapper p {
+					font-size: 10px !important;   
+					color: whitesmoke !important;
+					font-family: "Lato" !important;
+				}         
+				.cartodb-tooltip-content-wrapper h4 {
+					font-size: 10px !important;  
+					color: !important;  
+					font-family: "Lato" !important;
+				}                                
+				div.cartodb-tooltip-content-wrapper{
+					padding: 10px 10px 10px 10px;
+					max-width:none;
+					text-align: left;
+					background-color: #161616!important;
+					opacity: 0.85;
+					border-radius: 1px!important;        
+				}
+
+			div.cartodb-infobox{
+				/*background-color: #000000!important;*/
+				border-color: black !important;
+				border-bottom: black !important;           
+			}
+
+			div.cartodb-legend.category ul li,div.cartodb-legend.custom ul li,div.cartodb-legend .legend-title{
+				padding-bottom:1em;
+				line-height:2em;
+				text-transform:none !important;
+			}
+
+			div.cartodb-legend-stack div.cartodb-legend{
+				border-bottom: none !important;
+			}
+		</style>
+
+		<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+	</head>
+	<body>
+		<div id="map"></div>
+
+		<!-- Define the customized layer_selector -->		  
+		<div id="layer_selector" class="cartodb-infobox">
+			<ul>
+				<li id="layer1">Year Built</li>
+				<li id="layer2">Building Conditions</li>
+				<li id="layer3">Building Use</li>
+				<li id="layer4">Conservatorio's Properties</li>
+			</ul>
+		</div>
+
+		<!-- include cartodb.js library -->
+		<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+		<script>  
+			var selectedLayer;
+
+			// create the customized layer_selector
+			function createSelector(layers) {
+				var sql = new cartodb.SQL({ user: 'jsoyk' });
+				var $options = $('#layer_selector li');
+				$options.click(function(e) {
+					// get the area of the selected layer
+					var $li = $(e.target);
+					var layer = $li.attr('id');
+					if(selectedLayer != layer ){
+						// definitely more elegant ways to do this, but went for
+						// ease of understanding
+						if (layer == 'layer1'){
+							layers[1].getSubLayer(0).show(); 
+							layers[1].getSubLayer(1).hide(); 
+							layers[1].getSubLayer(2).hide();
+							layers[1].getSubLayer(3).hide(); 
+
+						}
+						else if (layer == 'layer2') {
+							layers[1].getSubLayer(0).hide();
+							layers[1].getSubLayer(1).show();
+							layers[1].getSubLayer(2).hide();
+							layers[1].getSubLayer(3).hide(); 
+						}
+						else if (layer == 'layer3') {
+							layers[1].getSubLayer(0).hide();
+							layers[1].getSubLayer(1).hide();
+							layers[1].getSubLayer(2).show();
+							layers[1].getSubLayer(3).hide(); 
+						}
+						else {
+							layers[1].getSubLayer(0).hide();
+							layers[1].getSubLayer(1).hide();
+							layers[1].getSubLayer(2).hide();
+							layers[1].getSubLayer(3).show(); 
+						}
+						$li.addClass('selected');
+						$li.siblings().removeClass('selected');
+					}
+				});
+			}
+					    
+			function main() {
+				// load and visualize the base map
+				cartodb.createVis('map',                       //Vis
+				 'https://jsoyk.carto.com/api/v2/viz/750e8bee-001f-11e6-8576-0e674067d321/viz.json', {
+					shareable: false,
+					title: false,
+					description: false,
+					search: false,
+					tiles_loader: true,
+					center_lat: 8.952354852501346,
+					center_lon: -79.535071849823,
+					zoom: 17.5,
+					layer_selector: false // 'true' to turn on default button 
+				})
+				.done(function(vis, layers) {
+					var map = vis.getNativeMap();
+    					 createSelector(layers);
+				})
+				.error(function(err) {
+					console.log(err);
+				});
+			}
+			window.onload = main;
+
+		</script>
+	</body>
+</html>
