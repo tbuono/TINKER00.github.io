@@ -3,15 +3,17 @@
 <style>
 
 .node circle {
-  fill: #999;
+  fill: #fff;
 }
 
 .node text {
-  font: 10px sans-serif;
+  font: 12px;
+  font-family: 'Vollkorn', sans-serif;
+
 }
 
 .node--internal circle {
-  fill: #555;
+  fill: #fff;
 }
 
 .node--internal text {
@@ -20,9 +22,9 @@
 
 .link {
   fill: none;
-  stroke: #555;
-  stroke-opacity: 0.4;
-  stroke-width: 1.5px;
+  stroke: #fff;
+  stroke-opacity: 1;
+  stroke-width: 1px;
 }
 
 </style>
@@ -36,7 +38,7 @@ var svg = d3.select("svg"),
     g = svg.append("g").attr("transform", "translate(40,0)");
 
 var tree = d3.cluster()
-    .size([height, width - 220]);
+    .size([height, width - 400]);
 
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
@@ -74,6 +76,8 @@ d3.csv("LEED-dendrogram.csv", function(error, data) {
       .attr("x", function(d) { return d.children ? -8 : 8; })
       .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
       .text(function(d) { return d.id.substring(d.id.lastIndexOf(".") + 1); });
+
+
 });
 
 </script>
