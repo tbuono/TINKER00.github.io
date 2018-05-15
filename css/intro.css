@@ -57,11 +57,11 @@ intro
     position: fixed;
     width:100%;
     left: 50%;
-    top: 50%;    
+    top: 50%;
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    
+
     pointer-events: none;
 }
 
@@ -119,4 +119,8 @@ intro
 #continueBtn a:hover{
     text-decoration: none;
     opacity:.7;
+}
+
+div, iframe {
+    margin: 0 auto;
 }

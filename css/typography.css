@@ -7,6 +7,10 @@ article {
     -webkit-overflow-scrolling: auto !important;
 }
 
+iframe {
+    margin: 200 auto;
+    display:block;
+}
 
 #forceLandscape {
     position: absolute;
