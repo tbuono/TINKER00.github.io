@@ -147,7 +147,7 @@ article {
 }
 
 #arrayNotebooks {
-	width:25%;
+	width:35%;
 }
 
 #objectNotebooks {
@@ -156,7 +156,7 @@ article {
 	background-size:contain;
 	background-position:center;
     width:100%;
-    top:15%;
+    top:35%;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
@@ -178,7 +178,7 @@ article {
     /*height:136px;*/
     height:100%;
     position:relative;
-    top:60%;
+    top:80%;
     -ms-transform: translateY(-46%); /* IE 9 */
     -webkit-transform: translateY(-46%); /* Safari */
     transform: translateY(-46%);
@@ -188,7 +188,7 @@ article {
 }
 
 #arrayLetter {
-	width:15%;
+	width:10%;
 	/*padding-right: 1.1%;
     padding-left: 1.1%;*/
 }
@@ -199,6 +199,7 @@ article {
 	background-size:contain;
 	background-position:center;
     width:100%;
+    top:21%;
     /*height:327px;*/
     height:100%;
     position:relative;
@@ -231,6 +232,23 @@ article {
 
 #objects .row {
 	height:50%;
+}
+
+#arrayBearFacts {
+	width:13%;
+}
+
+#objectBearFacts {
+	/*background-image: url("../assets/images/array/bearfacts-array@2x.png");*/
+    background-repeat:no-repeat;
+	background-size:contain;
+	background-position:center;
+    width:100%;
+    /*height:158px;*/
+    height:100%;
+    /*position:relative;
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);*/
 }
 
 
@@ -411,7 +429,7 @@ section p {
 }
 
 #letterD {
-    top:10%;
+    top:25%;
     left:5%;
 }
 
