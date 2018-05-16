@@ -7,11 +7,6 @@ article {
     -webkit-overflow-scrolling: auto !important;
 }
 
-iframe {
-    margin: 200 auto;
-    display:block;
-}
-
 #forceLandscape {
     position: absolute;
     width:100%;
@@ -416,7 +411,7 @@ section p {
 }
 
 #letterD {
-    top:26%;
+    top:10%;
     left:5%;
 }
 
