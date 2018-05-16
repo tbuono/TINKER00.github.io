@@ -166,7 +166,7 @@ article {
 }
 
 #arrayPhotos {
-	width: 15%;
+	width: 20%;
 }
 
 #objectPhotos {
@@ -188,7 +188,7 @@ article {
 }
 
 #arrayLetter {
-	width:10%;
+	width:20%;
 	/*padding-right: 1.1%;
     padding-left: 1.1%;*/
 }
@@ -235,7 +235,7 @@ article {
 }
 
 #arrayBearFacts {
-	width:13%;
+	width:20%;
 }
 
 #objectBearFacts {
@@ -244,6 +244,7 @@ article {
 	background-size:contain;
 	background-position:center;
     width:100%;
+    top:21%;
     /*height:158px;*/
     height:100%;
     /*position:relative;
