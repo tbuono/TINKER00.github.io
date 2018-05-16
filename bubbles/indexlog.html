@@ -18,9 +18,9 @@ circle {
 
 var width = 1000,
     height = 800,
-    padding = 1.5, // separation between same-color nodes
-    clusterPadding = 2, // separation between different-color nodes
-    maxRadius = 5;
+    padding = 7, // separation between same-color nodes
+    clusterPadding = 10, // separation between different-color nodes
+    maxRadius = 3;
 
 var color = d3.scale.ordinal()
       .range(["#7A99AC", "#E4002B"]);
@@ -83,7 +83,7 @@ node.append("circle")
 node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
-      .text(function(d) { return d.text.substring(0, d.radius / 4); });
+      .text(function(d) { return d.text.substring(0, d.radius / 1); });
 
 
 
