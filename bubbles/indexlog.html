@@ -19,7 +19,7 @@ circle {
 var width = 1000,
     height = 800,
     padding = 12, // separation between same-color nodes
-    clusterPadding = 10, // separation between different-color nodes
+    clusterPadding = 40, // separation between different-color nodes
     maxRadius = 3;
 
 var color = d3.scale.ordinal()
@@ -105,7 +105,7 @@ function create_nodes(data,node_counter) {
 
 
 function tick(e) {
-    node.each(cluster(10 * e.alpha * e.alpha))
+    node.each(cluster(3 * e.alpha * e.alpha))
         .each(collide(.5))
     .attr("transform", function (d) {
         var k = "translate(" + d.x + "," + d.y + ")";
