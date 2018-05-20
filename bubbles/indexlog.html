@@ -8,6 +8,16 @@ circle {
     stroke: #565352;
     stroke-width: 1;
 }
+.toolTip {
+ position: absolute;
+ display: none;
+ min-width: 80px;
+ height: auto;
+ background: none repeat scroll 0 0 #ffffff;
+ border: 1px solid #6F257F;
+ padding: 14px;
+ text-align: center;
+}
 </style>
 <body>
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -66,7 +76,8 @@ var force = d3.layout.force()
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-
+  
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 var node = svg.selectAll("circle")
     .data(nodes)
@@ -78,12 +89,20 @@ node.append("circle")
     return color(d.cluster);
     })
     .attr("r", function(d){return d.radius})
+    .on("mousemove", function(d){
+        tooltip
+       .style("left", d3.event.pageX - 50 + "px")
+       .style("top", d3.event.pageY - 70 + "px")
+      .style("display", "inline-block")
+      .html((data.text) + "<br>" + (data.count));
+      })
+     .on("mouseout", function(d){ tooltip.style("display", "none");});
 
 
-node.append("text")
-      .attr("dy", ".3em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.text.substring(0, d.radius / 1); });
+// node.append("text")
+//       .attr("dy", ".3em")
+//       .style("text-anchor", "middle")
+//       .text(function(d) { return d.text.substring(0, d.radius / 1); });
 
 
 
