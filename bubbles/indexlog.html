@@ -100,10 +100,10 @@ node.append("circle")
      .on("mouseout", function(d){ tooltip.style("display", "none");});
 
 
-// node.append("text")
-//       .attr("dy", ".3em")
-//       .style("text-anchor", "middle")
-//       .text(function(d) { return d.text.substring(0, d.radius / 1); });
+node.append("text")
+      .attr("dy", ".3em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.text.substring(0, d.radius / 1); });
 
 
 
