@@ -94,7 +94,7 @@ node.append("circle")
        .style("left", d3.event.pageX - 50 + "px")
        .style("top", d3.event.pageY - 70 + "px")
       .style("display", "inline-block")
-      .html(d.text + "<br>" + d.radius/.9125);
+      .html(d.text + "<br>" + d.radius/.2);
       })
     .on("mouseout", function(d){ tooltip.style("display", "none");});
 
@@ -113,7 +113,7 @@ function create_nodes(data,node_counter) {
       r = Math.sqrt((i + 1) / m * -Math.log(Math.random())) * maxRadius,
       d = {
         cluster: i,
-        radius: data[node_counter].size*.9125,//maybe good place to play with size
+        radius: data[node_counter].size*.2,//maybe good place to play with size
         text: data[node_counter].text,
         x: Math.cos(i / m * 2 * Math.PI) * 200 + width / 2 + Math.random(),
         y: Math.sin(i / m * 2 * Math.PI) * 200 + height / 2 + Math.random()
