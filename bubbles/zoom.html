@@ -37,7 +37,7 @@ var color = d3.scale.ordinal()
 
 
 
-d3.text("collapsedkey__.csv", function(error, text) {
+d3.text("collapsedkey__zoom.csv", function(error, text) {
   if (error) throw error;
   var colNames = "text,size,group\n" + text;
   var data = d3.csv.parse(colNames);
